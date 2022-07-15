@@ -1,3 +1,5 @@
+<%- include("header") -%>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -13,20 +15,22 @@
   </div>
 
   <div class="box">
-    <% for (var i=0; i<newListItems.length; i++) { %>
+    <% for (let i=0; i<newListItems.length; i++) { %>
     <div class="item">
-      <input type="checkbox" name="" value="">
-      <p><%=newListItems[i]%></p>
+      <input type="checkbox">
+      <p><%= newListItems[i] %></p>
     </div>
     <% } %>
 
-    <form class="" action="/" method="post">
+    <form class="item" action="/" method="post">
       <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-      <button type="submit" name="button">+</button>
+      <button type="submit" name="list" value="<%= listTitle%>">+</button>
   </div>
 
   </form>
 
 </body>
-
+<footer>Copyright 2022 eunchong</footer>
 </html>
+
+<%- include("footer") -%>
